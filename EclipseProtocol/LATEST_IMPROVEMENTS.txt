@@ -1,0 +1,261 @@
+╔═══════════════════════════════════════════════════════════╗
+║         LATEST IMPROVEMENTS - FINAL POLISH                ║
+╚═══════════════════════════════════════════════════════════╝
+
+✅ NEW FEATURES ADDED:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ENEMIES COLLIDE WITH WALLS
+2. VISUAL MELEE SWING EFFECT
+3. INCREASED MELEE DAMAGE
+4. MAGAZINE & RELOAD SYSTEM
+
+═══════════════════════════════════════════════════════════
+
+🧱 ENEMY WALL COLLISION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+HOW IT WORKS:
+- Enemies now collide with walls
+- Patrol enemies change direction when hitting walls
+- Hunters navigate around walls
+- Makes walls actually useful for strategy!
+
+TACTICAL ADVANTAGES:
+✓ Hide behind walls to break line of sight
+✓ Enemies can't chase through walls
+✓ Use walls to funnel enemies
+✓ Create safe zones
+✓ More strategic positioning
+
+═══════════════════════════════════════════════════════════
+
+⚔️ MELEE WEAPON IMPROVEMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+VISUAL SWING EFFECT:
+┌─────────────────────────────────────────────────────────┐
+│ - White arc shows swing direction                       │
+│ - Appears when you attack                               │
+│ - Fades out quickly (0.2 seconds)                       │
+│ - Shows attack range visually                           │
+│ - Helps with aiming melee attacks                       │
+└─────────────────────────────────────────────────────────┘
+
+DAMAGE INCREASED:
+- OLD: 30 damage
+- NEW: 50 damage
+- Now MORE powerful than gun!
+- Risk vs Reward: Close range but high damage
+
+COMPARISON:
+┌─────────────────────────────────────────────────────────┐
+│ MELEE                                                    │
+│ - Damage: 50                                            │
+│ - Range: Close (60 pixels)                             │
+│ - Cooldown: 0.5s                                        │
+│ - Ammo: Unlimited                                       │
+│ - Best for: High-risk, high-reward                     │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│ GUN                                                      │
+│ - Damage: 20 per bullet                                 │
+│ - Range: Long                                           │
+│ - Cooldown: 0.3s                                        │
+│ - Ammo: Limited (magazine system)                      │
+│ - Best for: Safe distance combat                       │
+└─────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════
+
+🔫 MAGAZINE & RELOAD SYSTEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+HOW IT WORKS:
+┌─────────────────────────────────────────────────────────┐
+│ Magazine Size: 5 bullets                                │
+│ Reload Time: 1.5 seconds                                │
+│ Reserve Ammo: 100 bullets                               │
+│ Control: Press R to reload                              │
+└─────────────────────────────────────────────────────────┘
+
+MAGAZINE SYSTEM:
+1. Start with 5 bullets in magazine
+2. Each shot uses 1 bullet from magazine
+3. After 5 shots, magazine is empty
+4. Press R to reload (takes 1.5 seconds)
+5. Reloading takes bullets from reserve ammo
+6. Can't shoot while reloading!
+
+AUTO-RELOAD:
+- If you try to shoot with empty magazine
+- Automatically starts reloading
+- Or press R manually anytime
+
+UI DISPLAY:
+┌─────────────────────────────────────────────────────────┐
+│ Normal:                                                  │
+│ Mag: 5/5                                                │
+│ Ammo: 100                                               │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│ After 3 shots:                                          │
+│ Mag: 2/5                                                │
+│ Ammo: 100                                               │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│ Empty magazine:                                         │
+│ Mag: 0/5 (RED)                                          │
+│ Ammo: 100                                               │
+│ Press R to reload!                                      │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│ Reloading:                                              │
+│ RELOADING... 1.2 (ORANGE)                               │
+└─────────────────────────────────────────────────────────┘
+
+STRATEGIC DEPTH:
+✓ Must manage magazine carefully
+✓ Reload during safe moments
+✓ Can't spam bullets anymore
+✓ Switch to melee while reloading
+✓ More tactical gameplay
+
+═══════════════════════════════════════════════════════════
+
+🎮 NEW CONTROLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+R - Reload gun (manual reload)
+
+FULL CONTROLS:
+  WASD/Arrows    - Move
+  Shift          - Dash
+  Q              - Switch weapon
+  Left Click     - Attack
+  R              - Reload
+  ESC            - Pause
+  1, 2, 3        - Select upgrade
+
+═══════════════════════════════════════════════════════════
+
+💡 STRATEGY TIPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WALL USAGE:
+✓ Break line of sight from hunters
+✓ Funnel enemies into choke points
+✓ Create safe reload zones
+✓ Kite enemies around corners
+✓ Use as cover while reloading
+
+WEAPON SWITCHING:
+✓ Shoot 5 bullets with gun
+✓ Switch to melee while reloading
+✓ Finish enemy with melee (50 damage!)
+✓ Switch back to gun when reloaded
+✓ Never waste time waiting
+
+RELOAD TIMING:
+✓ Reload behind walls
+✓ Reload after clearing area
+✓ Don't reload in combat if possible
+✓ Keep track of magazine count
+✓ Reload before engaging new enemies
+
+MELEE TACTICS:
+✓ Now deals 50 damage (very strong!)
+✓ Use for finishing low-health enemies
+✓ Dash in, melee, dash out
+✓ No ammo worries
+✓ Watch the swing arc for aiming
+
+═══════════════════════════════════════════════════════════
+
+📊 DAMAGE COMPARISON
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PATROL ENEMY (Room 1, 50 HP):
+- Melee: 1 hit (50 damage)
+- Gun: 3 shots (20 damage each)
+- Melee is now BETTER!
+
+PATROL ENEMY (Room 5, 130 HP):
+- Melee: 3 hits (50 damage each)
+- Gun: 7 shots (20 damage each)
+- Melee is faster if you can get close!
+
+HUNTER ENEMY (Room 2, 100 HP):
+- Melee: 2 hits (50 damage each)
+- Gun: 5 shots (20 damage each)
+- Melee is risky but efficient!
+
+WITH MULTI-SHOT (3 bullets):
+- Gun becomes 60 damage per shot
+- Better than melee at range
+- But uses 1 magazine slot
+
+═══════════════════════════════════════════════════════════
+
+🎯 COMBAT FLOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPTIMAL STRATEGY:
+1. Start with gun (5 shots)
+2. Shoot from safe distance
+3. Magazine empty? Switch to melee!
+4. Dash in, melee attack (50 damage!)
+5. Dash out to safety
+6. Reload gun (R key)
+7. Repeat!
+
+ADVANCED TACTICS:
+- Use walls to separate enemies
+- Reload while enemies navigate walls
+- Melee isolated enemies
+- Gun for groups (multi-shot)
+- Always have escape route
+
+═══════════════════════════════════════════════════════════
+
+⚠️ IMPORTANT CHANGES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MAGAZINE SYSTEM:
+- Can only fire 5 shots before reload
+- Must manage ammo more carefully
+- Reload takes 1.5 seconds (vulnerable!)
+- Can't spam bullets anymore
+
+MELEE BUFF:
+- Now 50 damage (was 30)
+- More viable as primary weapon
+- Risk vs reward gameplay
+- Visual feedback with swing arc
+
+ENEMY AI:
+- Enemies avoid walls now
+- Hunters navigate around obstacles
+- More challenging to kite
+- Walls are actual cover
+
+═══════════════════════════════════════════════════════════
+
+🏆 MASTERY CHALLENGES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Try to:
+□ Clear a room with melee only
+□ Never let magazine go empty
+□ Reload only behind walls
+□ Kill 10 enemies without reloading
+□ Beat Room 10 with melee primary
+□ Perfect reload timing (reload at 0 bullets)
+
+═══════════════════════════════════════════════════════════
+
+Game is now more tactical and skill-based! 🎮

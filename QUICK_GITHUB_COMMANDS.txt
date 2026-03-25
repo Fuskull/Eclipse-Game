@@ -1,0 +1,72 @@
+QUICK GITHUB UPLOAD COMMANDS
+============================
+
+FIRST TIME SETUP (Run these commands in order):
+-----------------------------------------------
+
+1. Open PowerShell in your project folder
+2. Run these commands:
+
+# Initialize git repository
+git init
+
+# Add all files
+git add .
+
+# Create first commit
+git commit -m "Initial commit - Eclipse Protocol game"
+
+# Create repository on GitHub first, then run:
+git remote add origin https://github.com/YOUR_USERNAME/eclipse-protocol.git
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
+
+
+DONE! Your game is now on GitHub.
+
+
+UPDATING LATER (when you make changes):
+---------------------------------------
+
+# Add changed files
+git add .
+
+# Commit with message
+git commit -m "Your update message here"
+
+# Push to GitHub
+git push
+
+
+USEFUL COMMANDS:
+---------------
+
+# Check status
+git status
+
+# See what changed
+git diff
+
+# View commit history
+git log
+
+# Undo last commit (keep changes)
+git reset --soft HEAD~1
+
+# Discard all local changes
+git reset --hard
+
+
+EXAMPLE WORKFLOW:
+----------------
+
+# Made some changes to the game
+# Now upload them:
+
+git add .
+git commit -m "Added new enemy animations"
+git push
+
+# That's it!

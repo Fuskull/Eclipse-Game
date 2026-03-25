@@ -1,0 +1,117 @@
+╔═══════════════════════════════════════════════════════════╗
+║         NEW FEATURES ADDED - ENHANCED GAMEPLAY            ║
+╚═══════════════════════════════════════════════════════════╝
+
+✅ FIXES APPLIED:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. EXIT DOOR NOW VISIBLE FROM START
+   - Fixed room size to 800x600 (always fits screen)
+   - Door always spawns on right side
+   - Green "EXIT" door visible immediately
+
+✅ NEW FEATURES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. WALLS FOR COVER
+   - 3-6 random walls per room
+   - Gray rectangular obstacles
+   - Use for cover from enemies
+   - Player and enemies collide with walls
+
+2. WEAPON SYSTEM
+   
+   A) MELEE WEAPON
+      - Close range attack
+      - Damage: 30
+      - Cooldown: 0.5 seconds
+      - Range: 60 pixels
+      - One-hit kill on enemies
+   
+   B) GUN (RANGED)
+      - Long range attack
+      - Damage: 20
+      - Cooldown: 0.3 seconds
+      - Yellow bullets
+      - Bullet speed: 400
+      - Lifetime: 3 seconds
+
+NEW CONTROLS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WASD/Arrows    - Move player
+Shift          - Dash (costs 25 energy)
+Q              - Switch weapon (Melee ↔ Gun)
+Left Click     - Attack (aim with mouse)
+ESC            - Pause
+
+GAMEPLAY TIPS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Use walls to hide from enemies
+- Melee does more damage but risky
+- Gun is safer for distant enemies
+- Watch weapon cooldown indicator
+- Bullets destroy enemies on hit
+- Switch weapons based on situation
+
+WEAPON DETAILS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MELEE:
++ High damage (30)
++ One-hit kill
+- Short range
+- Slower cooldown
+- Risky against hunters
+
+GUN:
++ Long range
++ Fast cooldown (0.3s)
++ Safe distance
+- Lower damage (20)
+- Need good aim
+
+STRATEGY:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Use gun for hunters (they chase you)
+2. Use melee for patrol enemies (predictable)
+3. Hide behind walls when reloading
+4. Dash away if surrounded
+5. Clear room before going to exit
+
+TECHNICAL DETAILS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Files Added:
+- weapons.lua (weapon system)
+
+Files Modified:
+- world.lua (walls + fixed room size)
+- player.lua (wall collision)
+- states/play.lua (weapon integration)
+- main.lua (mouse input)
+- ui.lua (weapon display)
+
+NEW UI ELEMENTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- "Weapon: MELEE" or "Weapon: GUN"
+- Cooldown timer when attacking
+- Updated control hints
+
+WHAT'S DIFFERENT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Before:
+- Only dodge enemies
+- No way to fight back
+- Exit sometimes off-screen
+- Open rooms
+
+After:
+- Can kill enemies with weapons
+- Two weapon types
+- Exit always visible
+- Walls for tactical gameplay
+
+═══════════════════════════════════════════════════════════
+
+🎮 GAME IS NOW MORE FUN AND STRATEGIC! 🎮
+
+Try it now:
+love EclipseProtocol

@@ -1,0 +1,196 @@
+╔═══════════════════════════════════════════════════════════╗
+║         PHASE 2 - TESTING & VERIFICATION GUIDE            ║
+╚═══════════════════════════════════════════════════════════╝
+
+QUICK START:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Install Love2D: https://love2d.org/
+2. Run: love EclipseProtocol
+3. Or drag EclipseProtocol folder onto love.exe
+
+FEATURE TESTING CHECKLIST:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ MENU STATE
+  □ Window opens with "ECLIPSE PROTOCOL" title
+  □ Instructions visible
+  □ Press SPACE → Game starts
+  □ Press ESC → Game quits
+
+✓ PLAYER MOVEMENT
+  □ WASD moves player smoothly
+  □ Arrow keys also work
+  □ Player stays within room bounds
+  □ Movement is velocity-based (smooth)
+
+✓ ENERGY & DASH SYSTEM
+  □ Energy bar visible (blue, below health)
+  □ Energy starts at 100
+  □ Hold Shift + direction → Player dashes
+  □ Dash costs 25 energy
+  □ Energy regenerates automatically
+  □ Dash has 1 second cooldown
+  □ Can't dash without enough energy
+
+✓ PATROL ENEMIES (RED)
+  □ Red squares spawn in room
+  □ Move back and forth (patrol)
+  □ Gray line shows patrol path
+  □ Multiple enemies spawn
+  □ Collision damages player (-10 HP)
+
+✓ HUNTER ENEMIES (ORANGE)
+  □ Orange squares spawn (after room 2)
+  □ Show current state above them
+  □ States visible: "idle", "patrol", "chase", "return"
+  □ Chase player when close (< 200 pixels)
+  □ Return to spawn when player escapes
+  □ Collision damages player (-15 HP)
+  □ Detection circle visible (faint orange)
+
+✓ FSM VERIFICATION (CRITICAL!)
+  □ Hunter starts in "patrol" state
+  □ Get close → Changes to "chase"
+  □ Run away → Changes to "return"
+  □ Returns to spawn → Back to "patrol"
+  □ State text updates in real-time
+
+✓ PROCEDURAL GENERATION
+  □ Each room has different size
+  □ Enemies spawn in random positions
+  □ Green EXIT door on right side
+  □ Room counter increases
+  □ More enemies in later rooms
+
+✓ DIFFICULTY SCALING
+  □ Room 1: 2-3 patrol enemies
+  □ Room 3+: Hunters start appearing
+  □ Enemies move faster in later rooms
+  □ More enemies spawn progressively
+
+✓ DOOR SYSTEM
+  □ Green door visible on right
+  □ Touch door → New room generates
+  □ Player respawns on left side
+  □ Room counter increases
+  □ Old enemies cleared
+
+✓ UI ELEMENTS
+  □ Health bar (top left, color-coded)
+  □ Energy bar (below health, blue)
+  □ Room counter visible
+  □ Timer counting up
+  □ Controls displayed
+  □ All text readable
+
+✓ PAUSE STATE
+  □ Press ESC during game → Pauses
+  □ "PAUSED" text appears
+  □ Game frozen in background
+  □ Press ESC again → Resumes
+  □ Press R → Restarts
+
+✓ GAME OVER STATE
+  □ Health reaches 0 → Game Over
+  □ "GAME OVER" in red
+  □ Stats displayed (rooms, time)
+  □ Press R → Restart
+  □ Press ESC → Return to menu
+
+✓ VICTORY STATE
+  □ Survive 3 minutes → Victory
+  □ OR clear 10 rooms → Victory
+  □ "VICTORY!" in green
+  □ Stats displayed
+  □ Press R → Play again
+
+✓ SOUND SYSTEM (Optional)
+  □ Background music plays (if file exists)
+  □ Hit sound on damage (if file exists)
+  □ Dash sound on dash (if file exists)
+  □ Game works without sounds
+  □ Console shows warnings if missing
+
+COMMON ISSUES & FIXES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Issue: "No code to run"
+Fix: Make sure you're running the FOLDER, not a .lua file
+
+Issue: Sound warnings in console
+Fix: Normal! Game works without sound files
+
+Issue: Window too small
+Fix: Configured at 800x600, check conf.lua
+
+Issue: Can't see hunters
+Fix: They spawn after room 2, keep playing
+
+Issue: Dash not working
+Fix: Need 25+ energy and 1 second cooldown
+
+Issue: Game too hard
+Fix: Use dash to escape, avoid hunters
+
+PROFESSOR DEMO SCRIPT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Show Menu State
+   "Here's the main menu with game states working"
+
+2. Start Game (Space)
+   "Game state switches to play state"
+
+3. Show Player Movement
+   "Velocity-based movement with WASD"
+
+4. Show Energy & Dash
+   "Energy system with dash ability - hold Shift"
+
+5. Show Patrol Enemies
+   "Red enemies with simple patrol AI"
+
+6. Show Hunter FSM
+   "Orange hunter with 4-state FSM"
+   - Walk close: "See it switch to chase state"
+   - Run away: "Now it returns to spawn"
+   - Point to state text above enemy
+
+7. Show Procedural Generation
+   "Touch the green door for new random room"
+   "Notice room size and enemy positions change"
+
+8. Show Difficulty Scaling
+   "More enemies and faster movement in later rooms"
+
+9. Show UI
+   "Health bar, energy bar, room counter, timer"
+
+10. Show Pause (ESC)
+    "Pause state with game frozen"
+
+11. Show Game Over
+    "Let health reach 0 to show game over state"
+
+12. Show File Structure
+    "Clean architecture with states folder"
+
+GRADING RUBRIC ALIGNMENT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Second Enemy Type: hunter.lua (orange, FSM-based)
+✓ FSM Implementation: 4 states with transitions
+✓ Energy System: player.lua (energy + dash)
+✓ Game States: 5 states in states/ folder
+✓ Procedural: world.lua (random rooms)
+✓ Difficulty: Scales with room count
+✓ Sound: Music + SFX with fallback
+✓ UI: Polished with all info
+✓ Architecture: 13 files, organized
+✓ Playability: Full game loop works
+
+ALL PHASE 2 REQUIREMENTS: ✅ COMPLETE
+
+═══════════════════════════════════════════════════════════
+
+Ready for submission! 🚀

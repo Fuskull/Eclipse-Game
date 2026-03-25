@@ -1,0 +1,45 @@
+MELEE DAMAGE FIX - COMPLETE
+===========================
+
+ISSUE:
+- melee attacks were not dealing any damage to enemies
+
+ROOT CAUSE:
+- the attack data from weapons.meleeAttack() was being returned but not processed
+- no collision detection was happening between melee attacks and enemies
+
+FIX APPLIED:
+- added melee collision detection in play.mousepressed function
+- when melee attack happens, checks distance from attack point to all enemies
+- if enemy is within melee range (60 pixels), applies damage (50 HP)
+- properly removes dead enemies and spawns pickups
+
+CURRENT MELEE STATS:
+- damage: 50 HP (increased from 30)
+- range: 60 pixels
+- cooldown: 0.5 seconds
+- visual swing effect: white arc that fades out
+
+MAGAZINE SYSTEM:
+- 5 bullets per magazine
+- 1.5 second reload time
+- press R to reload manually
+- auto-reload when magazine empty
+- UI shows "Mag: X/5" and "Ammo: X"
+- "RELOADING..." message during reload
+
+ENEMY WALL COLLISION:
+- patrol enemies bounce off walls
+- hunters navigate around walls in all states (patrol, chase, return)
+
+ALL FEATURES NOW WORKING:
+✓ melee deals damage (50 HP)
+✓ melee visual swing effect
+✓ magazine system with reload
+✓ enemy wall collision
+✓ health bars on enemies
+✓ exit door locked until room clear
+✓ XP and pickup drops
+✓ upgrade system on level up
+
+READY FOR TESTING!

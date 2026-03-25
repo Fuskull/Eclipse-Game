@@ -1,0 +1,41 @@
+╔═══════════════════════════════════════════════════════════╗
+║              ECLIPSE PROTOCOL - CONTROLS                  ║
+╚═══════════════════════════════════════════════════════════╝
+
+🎮 MOVEMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+W / ↑         Move Up
+S / ↓         Move Down
+A / ←         Move Left
+D / →         Move Right
+
+⚡ ABILITIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Shift         Dash (costs 25 energy)
+
+🔫 COMBAT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Q             Switch Weapon (Melee ↔ Gun)
+Left Click    Attack (aim with mouse)
+
+📋 MENU
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Space         Start Game (from menu)
+ESC           Pause / Menu
+R             Restart (from game over)
+
+🎯 OBJECTIVES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Kill enemies with weapons
+- Reach the green EXIT door
+- Survive and clear rooms
+- Win: 3 minutes OR 10 rooms
+
+💡 QUICK TIPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Melee = High damage, close range
+✓ Gun = Safe distance, fast fire
+✓ Use walls for cover
+✓ Dash to escape danger
+✓ Watch your energy bar
+✓ Kill all enemies or run to exit

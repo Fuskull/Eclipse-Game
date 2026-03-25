@@ -1,0 +1,239 @@
+╔═══════════════════════════════════════════════════════════╗
+║         ENEMY HEALTH SYSTEM - NEW MECHANICS               ║
+╚═══════════════════════════════════════════════════════════╝
+
+✅ NEW FEATURES ADDED:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ENEMY HEALTH SYSTEM
+2. EXIT DOOR LOCKED UNTIL ROOM CLEARED
+3. SCALING ENEMY DIFFICULTY
+
+═══════════════════════════════════════════════════════════
+
+💪 ENEMY HEALTH SYSTEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PATROL ENEMIES (RED):
+┌─────────────────────────────────────────────────────────┐
+│ Base Health: 50 HP                                      │
+│ Scaling: +20 HP per difficulty level                    │
+│                                                          │
+│ Room 1: 50 HP  (3 shots to kill)                       │
+│ Room 2: 70 HP  (4 shots to kill)                       │
+│ Room 3: 90 HP  (5 shots to kill)                       │
+│ Room 5: 130 HP (7 shots to kill)                       │
+│ Room 10: 230 HP (12 shots to kill)                     │
+└─────────────────────────────────────────────────────────┘
+
+HUNTER ENEMIES (ORANGE):
+┌─────────────────────────────────────────────────────────┐
+│ Base Health: 100 HP                                     │
+│ Scaling: +30 HP per room                                │
+│                                                          │
+│ Room 2: 100 HP (5 shots to kill)                       │
+│ Room 3: 130 HP (7 shots to kill)                       │
+│ Room 5: 190 HP (10 shots to kill)                      │
+│ Room 10: 340 HP (17 shots to kill)                     │
+└─────────────────────────────────────────────────────────┘
+
+VISUAL FEEDBACK:
+- Health bar above each enemy
+- Red bar for patrol enemies
+- Orange bar for hunters
+- Enemy flashes white when hit
+- Bar depletes as they take damage
+
+WEAPON DAMAGE:
+- Gun: 20 damage per bullet
+- Melee: 30 damage per hit
+- Multi-Shot: 20 damage per bullet (multiple bullets!)
+
+═══════════════════════════════════════════════════════════
+
+🚪 EXIT DOOR MECHANICS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+HOW IT WORKS:
+1. Door is HIDDEN when room starts
+2. "Clear Room!" message shows where door will be
+3. Kill ALL enemies in the room
+4. Door appears (green) when room is cleared
+5. Touch door to progress to next room
+
+VISUAL STATES:
+┌─────────────────────────────────────────────────────────┐
+│ LOCKED (Enemies Alive)                                  │
+│ - Gray outline                                          │
+│ - "Clear Room!" text                                    │
+│ - Cannot interact                                       │
+│ - Enemy counter shows remaining                         │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│ UNLOCKED (Room Cleared)                                 │
+│ - Green solid door                                      │
+│ - "EXIT" text                                           │
+│ - Can walk through                                      │
+│ - Generates new room                                    │
+└─────────────────────────────────────────────────────────┘
+
+ENEMY COUNTER:
+- Top right corner shows "Enemies: X"
+- Updates in real-time
+- Disappears when room is cleared
+- Helps track progress
+
+═══════════════════════════════════════════════════════════
+
+📈 DIFFICULTY SCALING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FORMULA:
+difficulty = 1 + (roomCount * 0.2)
+
+WHAT SCALES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ENEMY HEALTH
+   - Patrol: 50 + (difficulty - 1) * 20
+   - Hunter: 100 + (roomCount - 1) * 30
+
+2. ENEMY SPEED
+   - Patrol: 100 * difficulty
+   - Room 1: 100 speed
+   - Room 5: 200 speed
+   - Room 10: 300 speed
+
+3. ENEMY COUNT
+   - Patrol: 2 + roomCount (max 5)
+   - Hunter: roomCount / 2 (max 3)
+
+PROGRESSION CURVE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Room 1:
+- 2 patrol enemies (50 HP each)
+- Total: 100 HP to clear
+- Easy
+
+Room 3:
+- 4 patrol enemies (90 HP each)
+- 1 hunter (130 HP)
+- Total: 490 HP to clear
+- Moderate
+
+Room 5:
+- 5 patrol enemies (130 HP each)
+- 2 hunters (190 HP each)
+- Total: 1,030 HP to clear
+- Hard
+
+Room 10:
+- 5 patrol enemies (230 HP each)
+- 3 hunters (340 HP each)
+- Total: 2,170 HP to clear
+- Very Hard!
+
+═══════════════════════════════════════════════════════════
+
+💡 STRATEGY TIPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EARLY ROOMS (1-3):
+- Enemies die quickly
+- Gun is efficient
+- Save ammo for later
+- Learn enemy patterns
+
+MID ROOMS (4-6):
+- Enemies take multiple hits
+- Multi-Shot becomes essential
+- Use walls for cover
+- Prioritize hunters (more XP)
+
+LATE ROOMS (7-10):
+- Enemies are bullet sponges
+- MUST have upgrades
+- Kite enemies around walls
+- Focus fire one at a time
+- Melee risky but efficient
+
+UPGRADE PRIORITY:
+1. Multi-Shot (CRITICAL for late game)
+2. Faster Cooldowns (more DPS)
+3. Ammo Capacity (don't run out)
+4. Health Regen (sustain)
+5. Max Health (survive longer)
+
+COMBAT TACTICS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Kite enemies around walls
+✓ Focus one enemy at a time
+✓ Use dash to reposition
+✓ Collect pickups between fights
+✓ Save melee for low-health enemies
+✓ Don't get surrounded
+✓ Watch ammo counter
+✓ Prioritize hunters (they chase you)
+
+═══════════════════════════════════════════════════════════
+
+🎯 ROOM CLEAR OBJECTIVES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+GOAL: Kill all enemies to unlock exit
+
+REWARDS FOR CLEARING:
+- XP from kills
+- Health pack drops
+- Ammo pack drops
+- Access to next room
+- Sense of accomplishment!
+
+PENALTIES FOR RUSHING:
+- Can't skip enemies
+- Must clear to progress
+- More strategic gameplay
+- Can't just run to exit
+
+═══════════════════════════════════════════════════════════
+
+📊 DAMAGE CALCULATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SHOTS TO KILL (Gun, 20 damage):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Patrol Enemy:
+- Room 1: 3 shots (50 HP)
+- Room 5: 7 shots (130 HP)
+- Room 10: 12 shots (230 HP)
+
+Hunter Enemy:
+- Room 2: 5 shots (100 HP)
+- Room 5: 10 shots (190 HP)
+- Room 10: 17 shots (340 HP)
+
+WITH MULTI-SHOT (3 bullets):
+- 3x damage per shot!
+- Room 10 patrol: 4 shots instead of 12
+- Room 10 hunter: 6 shots instead of 17
+- GAME CHANGER!
+
+═══════════════════════════════════════════════════════════
+
+🏆 MASTERY CHALLENGES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Try to:
+- Clear Room 10 without taking damage
+- Kill a Room 10 hunter with melee only
+- Clear a room without using dash
+- Reach Room 10 with only gun upgrades
+- Speed run: clear 5 rooms in 2 minutes
+
+═══════════════════════════════════════════════════════════
+
+Game is now much more challenging and strategic! 🎮
