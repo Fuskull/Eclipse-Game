@@ -98,7 +98,9 @@ function world.draw()
     -- draw walls
     if world.walls then
         for i, wall in ipairs(world.walls) do
-            love.graphics.setColor(wall.color)
+            -- ensure wall has color property
+            local wallColor = wall.color or {0.4, 0.4, 0.4}
+            love.graphics.setColor(wallColor)
             love.graphics.rectangle("fill", wall.x, wall.y, wall.width, wall.height)
             love.graphics.setColor(0.6, 0.6, 0.6)
             love.graphics.rectangle("line", wall.x, wall.y, wall.width, wall.height)

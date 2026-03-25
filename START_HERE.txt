@@ -1,0 +1,32 @@
+╔═══════════════════════════════════════════════════════════╗
+║         QUICK START - 2 SIMPLE STEPS                      ║
+╚═══════════════════════════════════════════════════════════╝
+
+STEP 1: Install Love2D
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Right-click on "install_love2d.ps1" → Run with PowerShell
+
+(If you get a security warning, type: Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass)
+
+
+STEP 2: Run the Game
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Double-click "run_eclipse_protocol.bat"
+
+
+That's it! The game should start.
+
+═══════════════════════════════════════════════════════════
+
+ALTERNATIVE (Manual Commands):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Open PowerShell in this folder and run:
+
+# Install Love2D
+powershell -ExecutionPolicy Bypass -File install_love2d.ps1
+
+# Run the game
+.\love2d\love-11.5-win64\love.exe .\EclipseProtocol
+
+═══════════════════════════════════════════════════════════

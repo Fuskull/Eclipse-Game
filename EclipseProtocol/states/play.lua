@@ -109,8 +109,8 @@ function play.update(dt)
     
     play.gameTimer = play.gameTimer + dt
     
-    -- check victory condition
-    if play.gameTimer >= play.victoryTime or world.roomCount >= 10 then
+    -- check victory condition (10 rooms cleared)
+    if world.roomCount >= 10 then
         stateManager.switch("victory")
         return
     end
